@@ -10,9 +10,9 @@ templateUrl:'todo.component.html',
 })
 
 export class todoComponent {
-    constructor (private _listToDo:listToDoService,
+    constructor (private _listToDo: listToDoService,
                 private navCtrl:NavController) {
-                    
+                  console.log(_listToDo);  
                 }
     goAdding(){
         this.navCtrl.push(AddingComponent)

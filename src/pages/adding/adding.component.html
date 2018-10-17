@@ -25,7 +25,7 @@
 
 
 
-<ion-card>
+<ion-card *ngIf="items.length>0">
     <ion-card-header>
        <ion-item>
          <h3>To Do</h3>
@@ -34,14 +34,14 @@
         <ion-card-content>
             <ion-item  *ngFor="let item of items; let i =index">
                 <button ion-button color="dark" clear>{{item.name}}</button>
-                <button ion-button outline  item-right color="danger" clear>
+                <button (click)="deleteItem(i)" ion-button outline  item-right color="danger" clear>
                     <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
-                            Delete ({{i}})
+                            Delete 
                 </button>
             </ion-item>
     </ion-card-content>
 </ion-card>
-<button ion-button icon-left  class="button-block">
+<button  (click)="saveList()" ion-button icon-left  class="button-block">
         <ion-icon ios="ios-add-circle" md="md-add-circle"></ion-icon>
 Save List
     </button>
