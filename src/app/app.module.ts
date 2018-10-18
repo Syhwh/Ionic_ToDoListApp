@@ -15,9 +15,11 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import{todoComponent} from '../pages/todo/todo.component';
+import {todoComponent} from '../pages/todo/todo.component';
 import {doneComponent } from '../pages/done/done.component';
 import {AddingComponent} from '../pages/adding/adding.component'
+import {DetailsComponent} from "../pages/details/details.component";
+
 @NgModule({
   declarations: [
     MyApp,
@@ -28,7 +30,8 @@ import {AddingComponent} from '../pages/adding/adding.component'
     todoComponent,
     doneComponent,
     AddingComponent,
-    PlaceHolderPipe
+    PlaceHolderPipe,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import {AddingComponent} from '../pages/adding/adding.component'
     TabsPage,
     todoComponent,
     doneComponent,
-    AddingComponent
+    AddingComponent,
+    DetailsComponent
   ],
   providers: [
     StatusBar,

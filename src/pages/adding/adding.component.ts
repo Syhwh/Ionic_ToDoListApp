@@ -22,6 +22,7 @@ addToDo(){
     }    
     let item= new listItem();
     item.name=this.nameItem;
+    // item.itemCompleted=false;
     this.items.push(item);
     this.nameItem="";
 }

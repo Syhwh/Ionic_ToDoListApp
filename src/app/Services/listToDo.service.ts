@@ -22,5 +22,8 @@ addData(list:generalList){
     this.lists.push(list);
     this.updateData();
 }
-
-    }
+deleteList(idx:number){
+    this.lists.splice(idx,1);
+    this.updateData();
+}
+}

@@ -3,10 +3,28 @@
       <ion-title>To-do</ion-title>
     </ion-navbar>
   </ion-header>
-  
-  <ion-content padding>
-    <h2>To-Do-List</h2>    
-    <ion-card *ngFor="let list of _listToDo.lists">      
+  <ion-content  class=" cards-bg">
+  <ion-card class="cards-list">
+      <ion-card-header>
+          To-Do-List
+      </ion-card-header>    
+      <ion-list *ngFor="let list of _listToDo.lists; let i = index">
+        <button ion-item (click)="goDetail(list,i)">
+           <ion-icon name="list" item-start></ion-icon>          
+             {{list.name}}  
+           <ion-icon name="arrow-dropright" item-end></ion-icon>
+        </button>
+      </ion-list>
+    </ion-card>
+
+
+
+
+
+
+ 
+    <!--h2>To-Do-List</h2>    
+    <ion-card-- *ngFor="let list of _listToDo.lists">      
     <ion-card-header  >
       <ion-item color="dark"> 
            {{list.name}}  
@@ -25,7 +43,7 @@
         <ion-icon color="primary" ios="ios-arrow-dropdown" md="md-arrow-dropdown"></ion-icon>
       </ion-item>
     </ion-card-content>
-  </ion-card>
+  </ion-card-->
 
 
   <ion-fab right bottom>

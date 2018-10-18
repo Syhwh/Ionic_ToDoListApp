@@ -17,3 +17,14 @@
 .text-center{
     text-align: center;
 }
+.text-right{
+    text-align: right;
+}
+ion-card.cards-list ion-card-header {
+    color: map-get($colors, primary);
+  }
+
+.itemDone{
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
